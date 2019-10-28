@@ -1,0 +1,43 @@
+Primero conectamos la memoria USB en el puerto USB de Windows e iniciamos el software Disk Imager Win32 y elegimos el archivo ISO de
+Kali Linux con el que crearemos la imagen y verificaremos que la unidad USB que será sobrescrita es la correcta.
+
+Una vez que la imagen haya sido creada, expulsaremos de forma segura la unidad USB . Ahora ya tenemos preparada la memoria USB para arrancar Kali Linux.
+
+ Crear una imagen de Kali en Linux
+ 
+ - creación de una memoria USB desde la cual pueda arrancar Kali Linux en un entorno de Linux es fácil. Una vez que hayamos descargado
+ el archivo ISO de Kali, podemos utilizar dd para copiarlo a la memoria USB:
+ 
+ADVERTENCIA: Aunque el proceso de creación de imágenes de Kali en una memoria USB es muy fácil, usted puede fácilmente destruir 
+particiones arbitrarias con dd si usted no entiende lo que está haciendo. Queda advertido.
+
+- Conectamos el dispositivo USB al puerto USB de nuestro ordenador.
+- Comprobamos  la ruta de el dispositivo de almacenamiento USB con dmesg.
+- Procedemos (con cuidado) a crear la imagen de Kali Linux en el dispositivo USB: d if=kali.iso of=/dev/sdb
+Ahora podemos arrancar en un entorno Kali Live / Instalador usando el dispositivo USB.
+
+Agregar persistencia a la memoria USB de Kali Linux
+
+La adición de persistencia (la capacidad de guardar archivos y los cambios a través de arranques en directo) a nuestra imagen de Kali 
+Linux puede ser muy útil en ciertas situaciones. Para agregar persistencia a nuestra memoria USB de Kali Linux, vamos a seguir estos
+pasos. En este ejemplo, asumimos que nuestra unidad USB es /dev/sdb. Si deseamos agregar la persistencia, necesitaremos un dispositivo 
+USB más grande que el de requisitos anteriores.
+
+- Creamos la imagen de Kali Linux en nuestra memoria USB como he explicado anteriormente, utilizando el “Método de Linux” y dd.
+- Creamos y formateamos una partición adicional en la memoria USB. Podemos utilizar gparted invocando: gparted /dev/sdb
+- Nuestro esquema de particionamiento actual debe ser similar a este:usb-persistence-basic-partitioning
+- Procedemos a formatear la nueva partición para ser utilizada para la persistencia. En éste ejemplo, utilizo todo el espacio disponible
+restante. Nos aseguramos de que la etiqueta de volumen de la partición recién creada sea la de la persistencia, y le damos formato 
+utilizando el sistema de archivos ext4.
+- Una vez que el proceso se haya completado, montamos la partición persistente USB utilizando los siguientes comandos:
+                                            mkdir /mnt/usb
+                                           mount /dev/sdb2 /mnt/usb
+                                           echo “/ union” >> /mnt/usb/persistence.conf
+                                           umount /mnt/usb
+                                           
+- Conectamos la memoria USB en el equipo. Nos aseguramos de que la BIOS arrancará desde el dispositivo USB. Cuando la pantalla de 
+arranque y Linux Kali aparezca, seleccionamos “boot en vivo” en el menú (no presionamos enter), y presionamos el botón de tabulación.
+Esto nos permitirá editar los parámetros de arranque. Agregamos la palabra “persistence” al final de la línea de parámetro de arranque 
+cada vez que queramos montar el almacenamiento permanente. 
+
+Fin del proceso.
