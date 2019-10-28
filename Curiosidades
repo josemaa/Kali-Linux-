@@ -1,0 +1,33 @@
+PUEDES HACER QUE TE PIRATEEN
+
+En un sistema Linux normal, hay una cuenta para un usuario normal y una cuenta separada para root. Este no es el caso en Kali Linux. Kali 
+Linux usa la cuenta root por defecto y no te proporciona una cuenta de usuario normal. Esto se debe a que casi todas las herramientas de 
+seguridad disponibles en Kali requieren privilegios de root, y para evitar pedirte la contraseña de root cada minuto, la diseñaron de esa
+manera.
+
+Por supuesto, podrías simplemente crear una cuenta de usuario normal y empezar a usarla. Bueno, todavía no es recomendable porque no es 
+así como el diseño del sistema Kali Linux está destinado a funcionar. Te enfrentarás a muchos problemas al usar programas, abrir puertos,
+depurar software, descubrir por qué esta cosa no funciona sólo para descubrir que era un extraño error de privilegios. También te 
+molestarán todas las herramientas que te pedirán que introduzcas la contraseña cada vez que intentes hacer algo en tu sistema.
+
+Ahora, como estás obligado a utilizarlo como usuario root, todo el software que ejecutes en tu sistema también se ejecutará con 
+privilegios de root. Esto es malo si no sabes lo que estás haciendo, porque si hay una vulnerabilidad en Firefox por ejemplo y visitas uno
+de los sitios web oscuros infectados, el hacker podrá obtener permisos de root completos en tu PC y hackearte, los cuales habrían sido 
+limitados si estuvieras usando una cuenta de usuario normal. Además, algunas herramientas que puedes instalar y utilizar pueden abrir 
+puertos y filtrar información sin tu conocimiento, por lo que si no eres extremadamente cuidadoso, la gente puede hackearte de la misma
+manera que puedes intentar hackearlo.
+
+Si visitas grupos de Facebook relacionados con Kali Linux en pocas ocasiones, te darás cuenta de que casi un cuarto de los mensajes en 
+estos grupos son personas que piden ayuda porque alguien los ha pirateado.
+
+PUEDE METERTE EN LA CÁRCEL
+
+Kali Linux proporciona el software tal cual es. Entonces, es tu propia responsabilidad de cómo los usas.
+
+En los países más avanzados del mundo, el uso de herramientas de pruebas de penetración contra redes WiFi públicas o los dispositivos de 
+otros puede llevarte fácilmente a la cárcel. Ahora no pienses que no puedes ser rastreado sólo porque estás usando Kali, muchos sistemas 
+están configurados para tener complejos dispositivos de registro para simplemente rastrear a quienquiera que intente escuchar o piratear 
+sus redes, y puedes tropezarte con uno de ellos, y te destruirá la vida.
+
+Nunca uses las herramientas de Kali Linux contra dispositivos/redes que no te pertenezcan o que tengan permiso explícito para intentar
+piratearlas. Si dices que no sabías lo que estabas haciendo, no será aceptado como excusa en un tribunal.
