@@ -1,0 +1,20 @@
+Una de las formas más sencillas para probar Kali Linux es utilizar una de las imágenes preconfiguradas que permiten usar Kali Linux como 
+una máquina virtual.
+
+Este formato de Kali Linux está preparado para usarse desde el primer momento y para su uso se suponen una serie de conocimientos previos, 
+por lo que el sistema ya tiene preconfigurada una cuenta de superusuario (root) desde el que iniciar la sesión.
+
+Para acceder a esta cuenta, introduce root como usuario y la misma palabra al revés como contraseña. Es decir, toor.
+
+Una vez accedes a la sesión de Kali Linux, puedes modificar el idioma de la interfaz haciendo clic sobre las opciones de encendido que 
+encontrarás en la esquina superior derecha de la pantalla y pulsando sobre el icono de Todas las configuraciones que encontrarás en la 
+parte inferior izquierda del cuadro desplegable.
+
+En el cuadro de Todas las configuraciones, accede a Región e idioma y añade un nuevo idioma para luego usarlo como idioma predeterminado. 
+Necesitarás reiniciar la sesión para que se aplique el cambio de idioma.
+
+Como en tantas otras distros Linux, en los menús de Aplicaciones encontrarás, perfectamente clasificadas en categorías, todas las 
+herramientas y aplicaciones disponibles en Kali Linux.
+
+Además, también dispones de una barra lateral en la que encontrarás algunas de las herramientas más utilizadas, y que podrás personalizar
+a tu gusto para añadir otras herramientas.
